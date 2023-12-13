@@ -1,7 +1,8 @@
-* {
-  padding: 0;
-  margin: 0;
-}
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+/*imported fonts */
 
 @font-face {
   font-family: "spartan-regular";
@@ -13,57 +14,246 @@
   src: url("./assets/fonts/Spartan-Bold.ttf") format(".ttf");
 }
 
+/* Utility classes */
+
+:root {
+  /* colours */
+  --clr-white: 255 255 255;
+  --clr-background: 7 7 36;
+  --clr-drk-grey: 56 56 79;
+  --clr-light-grey: 131 131 145;
+  --clr-default: 65 158 187;
+  --clr-venus: 237 162 73;
+  --clr-earth: 109 46 213;
+  --clr-mars: 209 76 50;
+  --clr-jupiter: 216 58 52;
+  --clr-saturn: 205 81 32;
+  --clr-uranus: 30 193 162;
+  --clr-neptune: 45 104 240;
+  /*FONTS*/
+  /* font-sizes */
+
+  --fs-600: 2.5rem;
+  --fs-500: 1.75rem;
+  --fs-400: 0.7rem;
+  --fs-300: 0.6rem;
+  --fs-200: 0.5rem;
+
+  /* letter spacing */
+  --ls-500: -0.1rem;
+  --ls-300: 0.16rem;
+  --ls-200: 0.6rem;
+
+  /* line height */
+  --lh-600: 6.4rem;
+  --lh-500: 3.25rem;
+}
+
+@media (min-width: 47em) {
+  :root {
+    /* font-sizes */
+    --fs-600: 3rem;
+    --fs-500: 1.5rem;
+    --fs-400: 0.7rem;
+    --fs-300: 0.7rem;
+    --fs-200: 0.7rem;
+  }
+}
+
+@media (min-width: 61em) {
+  :root {
+    /* font-sizes */
+    --fs-600: 5rem;
+    --fs-500: 2.5rem;
+    --fs-400: 0.875rem;
+    --fs-300: 0.7rem;
+    --fs-200: 0.7rem;
+  }
+}
+
+/* colors */
+.text-white {
+  color: rgb(var(--clr-white));
+}
+
+.bg-white {
+  background-color: rgb(var(--clr-white));
+}
+
+.bg-background {
+  background-color: rgb(var(--clr-background));
+}
+
+.bg-dark-grey {
+  background-color: rgb(var(--clr-drk-grey));
+}
+
+.bg-light-grey {
+  background-color: rgb(var(--clr-light-grey));
+}
+
+.bg-default {
+  background-color: rgb(var(--clr-default));
+}
+
+.bg-venus {
+  background-color: rgb(var(--clr-venus));
+}
+
+.bg-earth {
+  background-color: rgb(var(--clr-earth));
+}
+
+.bg-mars {
+  background-color: rgb(var(--clr-mars));
+}
+
+.bg-jupiter {
+  background-color: rgb(var(--clr-jupiter));
+}
+
+.bg-saturn {
+  background-color: rgb(var(--clr-saturn));
+}
+
+.bg-neptune {
+  background-color: rgb(var(--clr-neptune));
+}
+
+.bg-uranus {
+  background-color: rgb(var(--clr-uranus));
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  color: rgb(var(--clr-white));
+  line-height: 1.3rem;
+}
+
+/* set up the body */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Class declarations */
+
 body {
   font-family: "spartan-regular";
-  font-size: 14px;
-  line-height: 25px;
+  font-size: var(--fs-400);
+  /* background-color: #070724; */
+  background-image: url("./assets/images/background-stars.svg");
+  background-size: cover;
 }
 
 h1 {
   font-family: "Antonio", sans-serif;
-  font-size: 80px;
-  line-height: 103px;
+  font-size: var(--fs-600);
+  line-height: var(--lh-600);
 }
 
 h2 {
   font-family: "Antonio", sans-serif;
-  font-size: 40px;
-  line-height: 52px;
-  letter-spacing: -1.5px;
+  font-size: var(--fs-500);
+  line-height: var(--lh-500);
+  letter-spacing: var(--ls-500);
 }
 
 h3 {
   font-family: "spartan-bold";
-  font-size: 12px;
-  line-height: 25px;
-  letter-spacing: 2.6px;
+  font-size: var(--fs-300);
+  letter-spacing: var(--ls-300);
 }
 
 h4 {
   font-family: "spartan-bold";
-  font-size: 11px;
-  line-height: 25px;
-  letter-spacing: 1px;
+  font-size: var(--fs-200);
+  letter-spacing: var(--ls-200);
+}
+
+p {
+  font-size: var(--fs-400);
 }
 
 button {
-  background-color: #070724;
+  background-color: rgb(var(--clr-background));
 }
 
 button :active {
-  background-color: #419ebb;
+  background-color: rgb(var(--clr-default));
 }
 
 button :hover {
-  background-color: #38384f;
+  background-color: rgb(var(--clr-background));
 }
 
-#mercury-image {
-  height: 111px;
+.nav-link {
 }
 
-@media only screen and (max-width: 768px) {
- #is-mobile{
+.nav-link.active {
+}
+
+#is-mobile{
+  
+}
+
+#is-browser{
   display: none;
- }
 }
+
+@media (min-width:47em){
+  
+#is-mobile{
+  display: none;
+}
+
+#is-browser{
+  display: block;
+}
+}
+
