@@ -1,8 +1,9 @@
 import "./styles.css";
+import "./quickStyles.css";
 import mecuryImage from "./assets/images/planet-mercury.svg";
 import navBarImage from "./assets/images/icon-hamburger.svg";
+import sourceImage from "./assets/images/icon-source.svg";
 import { useState, useEffect } from "react";
-import { isBrowser, isMobile } from "react-device-detect";
 
 function App() {
   const [data, setData] = useState(null);
@@ -39,48 +40,58 @@ function App() {
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
       {!loading && !error && (
-        <div>
-          <h2>THE PLANETS</h2>
-          <img src={navBarImage} />
+        <div className="container-grid">
+          <div className="top-bar">
+            {" "}
+            <h2>THE PLANETS</h2>
+            <img src={navBarImage} id="hamburger" />
+          </div>
+
           <div id="is-mobile">
-            <div className="">
+            <div className="is-mobile-textbox" id="is-mobile-overview">
               <h3>OVERVIEW</h3>
             </div>
-            <div className="">
+            <div className="is-mobile-textbox">
               <h3>STRUCTURE</h3>
             </div>
-            <div className="">
+            <div className="is-mobile-textbox">
               <h3>SURFACE</h3>
             </div>
           </div>
 
-          <div className="">
-            <div id="planet-card">
-              <img id="mercury-image" src={mecuryImage} />
-            </div>
+          <div id="planet-card">
+            <img id="mercury-image" src={mecuryImage} />
+          </div>
+
+          <div className="planet-data">
             <div>
-              <div>
-                <>
-                  <h1>{planetData.name}</h1>
+              <>
+                <h1 className="planet-data-name">{planetData.name}</h1>
 
-                  <p>{planetData.overview.content}</p>
-                  <a href={planetData.overview.source}>Source Wikipedia</a>
-                </>
-              </div>
-
-              <div id="is-browser">
-                <div>
-                  <h3>OVERVIEW</h3>
-
-                  <h3>STRUCTURE</h3>
-
-                  <h3>SURFACE</h3>
+                <p className="planet-data-overview">{planetData.overview.content}</p>
+                <div className="source">
+                  <span>Source: </span>
+                  <a href={planetData.overview.source}>
+                
+                      Wikipedia <img src={sourceImage} />
+                   
+                  </a>
                 </div>
+              </>
+            </div>
+
+            <div id="is-browser">
+              <div>
+                <h3>OVERVIEW</h3>
+
+                <h3>STRUCTURE</h3>
+
+                <h3>SURFACE</h3>
               </div>
             </div>
           </div>
 
-          <div className="">
+          <div className="planet-stats">
             <div className="">
               <h4>ROTATION TIME</h4> <h2>{planetData.rotation}</h2>
             </div>

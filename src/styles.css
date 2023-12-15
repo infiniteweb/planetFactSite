@@ -35,18 +35,18 @@
 
   --fs-600: 2.5rem;
   --fs-500: 1.75rem;
-  --fs-400: 0.7rem;
+  --fs-400: 0.9rem;
   --fs-300: 0.6rem;
   --fs-200: 0.5rem;
 
   /* letter spacing */
   --ls-500: -0.1rem;
-  --ls-300: 0.16rem;
-  --ls-200: 0.6rem;
+  --ls-300: 0.121rem;
+  --ls-200: 0.046rem;
 
   /* line height */
-  --lh-600: 6.4rem;
-  --lh-500: 3.25rem;
+  --lh-600: 3.25rem;
+  --lh-500: 2.25rem;
 }
 
 @media (min-width: 47em) {
@@ -68,6 +68,9 @@
     --fs-400: 0.875rem;
     --fs-300: 0.7rem;
     --fs-200: 0.7rem;
+
+    /* line height */
+    --lh-600: 6.4rem;
   }
 }
 
@@ -128,7 +131,6 @@
 /* Reset               */
 /* ------------------- */
 
-
 /* Box sizing */
 *,
 *::before,
@@ -143,7 +145,8 @@ h2,
 h3,
 h4,
 h5,
-p {
+p,
+a {
   margin: 0;
   color: rgb(var(--clr-white));
   line-height: 1.3rem;
@@ -232,28 +235,114 @@ button :hover {
   background-color: rgb(var(--clr-background));
 }
 
+.container-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  /*68 50 304 235 216`*/
+  grid-template-rows: 10vh 7vh 46vh 35vh 32vh;
+  /* margin: 24px 16px 47px 16px; */
+  height: 100vh;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+#hamburger {
+  max-width: 100%;
+  max-height: 17px;
+}
+
 .nav-link {
 }
 
 .nav-link.active {
 }
 
-#is-mobile{
-  
+#is-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
 }
 
-#is-browser{
+.is-mobile-textbox {
+  display: flex;
+  justify-content: center;
+  width: 21.3vw;
+}
+
+#is-mobile-overview {
+  justify-content: end;
+}
+
+#planet-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mercury-image {
+  max-width: 29vw;
+  height: auto;
+}
+
+.planet-data {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.planet-data-name {
+  margin-bottom: 16px;
+}
+
+.planet-data-overview {
+  margin: 0 24px 24px 24px;
+}
+
+.source > a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.source img {
+  width: 12px;
+  height: 12px;
+}
+
+.source > a > img {
+  margin-left: 2px;
+}
+
+.planet-stats{
+  margin: 28px 24px 47px;
+}
+
+.planet-stats > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 11px 24px 11px;
+  border: 1px solid;
+}
+
+#is-browser {
   display: none;
 }
 
-@media (min-width:47em){
-  
-#is-mobile{
-  display: none;
-}
+@media (min-width: 47em) {
+  #is-mobile {
+    display: none;
+  }
 
-#is-browser{
-  display: block;
+  #is-browser {
+    display: block;
+  }
 }
-}
-
