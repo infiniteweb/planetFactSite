@@ -238,13 +238,18 @@ button :hover {
 .container-grid {
   display: grid;
   grid-template-columns: 1fr;
-  /*68 50 304 235 216`*/
-  grid-template-rows: 10vh 7vh 46vh 35vh 32vh;
-  /* margin: 24px 16px 47px 16px; */
+  grid-template-areas:
+    "topbar"
+    "isMobile"
+    "planetCard"
+    "planetData"
+    "planetStats";
+  grid-template-rows: 10vh 7vh 46vh 35vh;
   height: 100vh;
 }
 
 .top-bar {
+  grid-area: topbar;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -262,7 +267,8 @@ button :hover {
 .nav-link.active {
 }
 
-#is-mobile {
+.is-mobile {
+  grid-area: isMobile;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -271,17 +277,23 @@ button :hover {
   border-bottom: 1px solid;
 }
 
+.browser-nav {
+  grid-area: browserNav;
+  display: none;
+}
+
 .is-mobile-textbox {
   display: flex;
   justify-content: center;
   width: 21.3vw;
 }
 
-#is-mobile-overview {
+.is-mobile-overview {
   justify-content: end;
 }
 
 #planet-card {
+  grid-area: planetCard;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -293,6 +305,7 @@ button :hover {
 }
 
 .planet-data {
+  grid-area: planetData;
   display: flex;
   text-align: center;
   align-items: center;
@@ -304,6 +317,11 @@ button :hover {
 
 .planet-data-overview {
   margin: 0 24px 24px 24px;
+}
+
+.is-browser {
+  grid-area: isBrowser;
+  display: none;
 }
 
 .source > a {
@@ -320,7 +338,10 @@ button :hover {
   margin-left: 2px;
 }
 
-.planet-stats{
+.planet-stats {
+  grid-area: planetStats;
+  display: flex;
+  flex-direction: column;
   margin: 28px 24px 47px;
 }
 
@@ -332,17 +353,71 @@ button :hover {
   padding: 11px 24px 11px;
   border: 1px solid;
 }
-
-#is-browser {
-  display: none;
-}
-
 @media (min-width: 47em) {
-  #is-mobile {
+  .container-grid {
+    grid-template-columns: 1fr 1fr;
+    /*  159 460 253 164 */
+    grid-template-rows: 8vh 5vh 37vh 24vh 16vh;
+    grid-template-areas:
+      "topbar topbar"
+      "browserNav browserNav"
+      "planetCard planetCard"
+      "planetData isBrowser"
+      "planetStats planetStats";
+  }
+  .top-bar {
+    justify-content: center !important;
+  }
+
+  #hamburger {
     display: none;
   }
 
-  #is-browser {
-    display: block;
+  .is-mobile {
+    display: none;
+  }
+
+  .browser-nav {
+    display: block !important;
+    border-bottom: 1px solid;
+  }
+
+  .browser-nav ul {
+    display: flex !important;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .browser-nav li {
+    list-style: none;
+  }
+
+  .planet-data {
+    text-align: start;
+    margin-left: 39px;
+    margin-right: 69px;
+  }
+
+  .planet-data p {
+    margin: 24px 0px 32px;
+  }
+
+  .is-browser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40px;
+  }
+
+ 
+
+  .planet-stats {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .planet-stats div {
+    flex-direction: column;
+    align-items: start;
   }
 }

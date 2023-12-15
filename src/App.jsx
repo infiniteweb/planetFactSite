@@ -46,9 +46,23 @@ function App() {
             <h2>THE PLANETS</h2>
             <img src={navBarImage} id="hamburger" />
           </div>
+          <div className="browser-nav">
+            <nav>
+              <ul>
+                <li>MERCURY</li>
+                <li>VENUS</li>
+                <li>EARTH</li>
+                <li>MARS</li>
+                <li>JUPITER</li>
+                <li>SATURN</li>
+                <li>URANUS</li>
+                <li>NEPTUNE</li>
+              </ul>
+            </nav>
+          </div>
 
-          <div id="is-mobile">
-            <div className="is-mobile-textbox" id="is-mobile-overview">
+          <div className="is-mobile">
+            <div className="is-mobile-textbox is-mobile-overview">
               <h3>OVERVIEW</h3>
             </div>
             <div className="is-mobile-textbox">
@@ -68,40 +82,41 @@ function App() {
               <>
                 <h1 className="planet-data-name">{planetData.name}</h1>
 
-                <p className="planet-data-overview">{planetData.overview.content}</p>
+                <p className="planet-data-overview">
+                  {planetData.overview.content}
+                </p>
                 <div className="source">
                   <span>Source: </span>
                   <a href={planetData.overview.source}>
-                
-                      Wikipedia <img src={sourceImage} />
-                   
+                    Wikipedia <img src={sourceImage} />
                   </a>
                 </div>
               </>
             </div>
-
-            <div id="is-browser">
-              <div>
-                <h3>OVERVIEW</h3>
-
-                <h3>STRUCTURE</h3>
-
-                <h3>SURFACE</h3>
-              </div>
-            </div>
+          </div>
+          <div className="is-browser">
+            <button>
+              <span>01</span><h3>OVERVIEW</h3>
+            </button>
+            <button>
+            <span>02</span><h3>INTERNAL STRUCTURE</h3>
+            </button>
+            <button>
+            <span>03</span><h3>SURFACE GEOLOGY</h3>
+            </button>
           </div>
 
           <div className="planet-stats">
-            <div className="">
+            <div>
               <h4>ROTATION TIME</h4> <h2>{planetData.rotation}</h2>
             </div>
-            <div className="">
+            <div>
               <h4>REVOLUTION TIME</h4> <h2>{planetData.revolution}</h2>
             </div>
-            <div className="">
+            <div>
               <h4>RADIUS</h4> <h2>{planetData.radius}</h2>
             </div>
-            <div className="">
+            <div>
               <h4>AVERAGE TEMP.</h4> <h2>{planetData.temperature}</h2>
             </div>
           </div>
