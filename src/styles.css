@@ -146,7 +146,8 @@ h3,
 h4,
 h5,
 p,
-a {
+a,
+span {
   margin: 0;
   color: rgb(var(--clr-white));
   line-height: 1.3rem;
@@ -405,11 +406,20 @@ button :hover {
   .is-browser {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-right: 40px;
+    /* justify-content: end; */
+    margin: 50px 30px 0px;
   }
 
- 
+  .is-browser button {
+    display: flex;
+    padding: 7px 87px 7px 0px;
+    margin-bottom: 16px;
+  }
+
+  .is-browser button span {
+    margin-right: 14px;
+    margin-left: 20px;
+  }
 
   .planet-stats {
     flex-direction: row;
