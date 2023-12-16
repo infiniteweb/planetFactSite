@@ -366,9 +366,29 @@ button :hover {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "topbar browserNav"
-      "planetCard planetData"
-      "planetCard isBrowser"
-      "planetStats planetStats" !important;
+      "planetCard  planetData"
+      "planetCard  isBrowser"
+      " planetStats planetStats " !important;
+  }
+
+  .top-bar {
+    justify-content: start !important;
+    border-bottom: 1px solid;
+    max-height: 85px;
+  }
+
+  .top-bar h2 {
+    font-size: 28px;
+  }
+
+  .browser-nav {
+    align-items: center;
+    max-height: 85px;
+  }
+
+  .browser-nav nav {
+    width: 95%;
+
   }
 }
 
@@ -384,7 +404,7 @@ button :hover {
       "planetStats planetStats";
   }
   .top-bar {
-    justify-content: center !important;
+    justify-content: center;
   }
 
   #hamburger {
