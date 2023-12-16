@@ -56,7 +56,7 @@
     --fs-500: 1.5rem;
     --fs-400: 0.7rem;
     --fs-300: 0.7rem;
-    --fs-200: 0.7rem;
+    --fs-200: 0.5rem;
   }
 }
 
@@ -245,8 +245,8 @@ button :hover {
     "planetCard"
     "planetData"
     "planetStats";
-  grid-template-rows: 10vh 7vh 46vh 35vh;
-  height: 100vh;
+  /* grid-template-rows: 10vh 7vh 46vh 35vh; */
+  min-height: 100vh;
 }
 
 .top-bar {
@@ -298,10 +298,16 @@ button :hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 300px;
 }
 
-#mercury-image {
-  max-width: 29vw;
+#planet-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#planet-image {
+  width: 38%;
   height: auto;
 }
 
@@ -354,11 +360,22 @@ button :hover {
   padding: 11px 24px 11px;
   border: 1px solid;
 }
+
+@media (min-width: 61em) {
+  .container-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "topbar browserNav"
+      "planetCard planetData"
+      "planetCard isBrowser"
+      "planetStats planetStats" !important;
+  }
+}
+
 @media (min-width: 47em) {
   .container-grid {
     grid-template-columns: 1fr 1fr;
-    /*  159 460 253 164 */
-    grid-template-rows: 8vh 5vh 37vh 24vh 16vh;
+
     grid-template-areas:
       "topbar topbar"
       "browserNav browserNav"
@@ -379,18 +396,31 @@ button :hover {
   }
 
   .browser-nav {
-    display: block !important;
+    display: flex !important;
     border-bottom: 1px solid;
+    justify-content: center;
+    gap: 33px;
   }
 
   .browser-nav ul {
     display: flex !important;
     justify-content: space-around;
     padding: 0;
+    min-width: 665px;
+    flex: 1;
   }
 
   .browser-nav li {
     list-style: none;
+  }
+
+  #planet-card {
+    min-height: 460px;
+  }
+
+  #planet-image {
+    width: 87%;
+    height: auto;
   }
 
   .planet-data {
@@ -414,6 +444,8 @@ button :hover {
     display: flex;
     padding: 7px 87px 7px 0px;
     margin-bottom: 16px;
+    border-style: solid;
+    min-height: 40px;
   }
 
   .is-browser button span {
@@ -423,11 +455,14 @@ button :hover {
 
   .planet-stats {
     flex-direction: row;
-    justify-content: space-between;
+    gap: 11px;
   }
 
   .planet-stats div {
     flex-direction: column;
     align-items: start;
+    flex: 1;
+    min-height: 88px;
+    padding: 16px 0px 19px 15px;
   }
 }

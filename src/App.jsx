@@ -1,6 +1,7 @@
 import "./styles.css";
 import "./quickStyles.css";
 import mecuryImage from "./assets/images/planet-mercury.svg";
+import venusImage from "./assets/images/planet-venus.svg";
 import navBarImage from "./assets/images/icon-hamburger.svg";
 import sourceImage from "./assets/images/icon-source.svg";
 import { useState, useEffect } from "react";
@@ -74,7 +75,9 @@ function App() {
           </div>
 
           <div id="planet-card">
-            <img id="mercury-image" src={mecuryImage} />
+            <span id="planet-image-wrapper">
+              <img id="planet-image" src={mecuryImage} />
+            </span>
           </div>
 
           <div className="planet-data">
@@ -96,13 +99,16 @@ function App() {
           </div>
           <div className="is-browser">
             <button>
-              <span>01</span><h3>OVERVIEW</h3>
+              <span>01</span>
+              <h3>OVERVIEW</h3>
             </button>
             <button>
-            <span>02</span><h3>INTERNAL STRUCTURE</h3>
+              <span>02</span>
+              <h3>INTERNAL STRUCTURE</h3>
             </button>
             <button>
-            <span>03</span><h3>SURFACE GEOLOGY</h3>
+              <span>03</span>
+              <h3>SURFACE GEOLOGY</h3>
             </button>
           </div>
 
