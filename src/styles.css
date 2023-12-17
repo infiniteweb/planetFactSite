@@ -262,7 +262,7 @@ button :hover {
   max-height: 17px;
 }
 
-.nav-link {
+.nav-link li {
 }
 
 .nav-link.active {
@@ -363,23 +363,25 @@ button :hover {
 
 @media (min-width: 61em) {
   .container-grid {
-    /* grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr !important; */
-
-    /* grid-template-areas:
-      "topbar topbar topbar topbar browserNav browserNav browserNav"
-      "planetCard planetCard  planetCard   planetData planetData planetData"
-      "planetCard planetCard planetCard  isBrowser isBrowser isBrowser"
-      "planetStats planetStats planetStats planetStats planetStats planetStats" !important; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "topbar browserNav"
+      "planetCard  planetData"
+      "planetCard  isBrowser"
+      "planetStats planetStats" !important;
   }
+
+
 
   .top-bar {
     justify-content: start !important;
     border-bottom: 1px solid;
     max-height: 85px;
+    padding-left: 36px;
   }
 
   .top-bar h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .browser-nav {
@@ -388,7 +390,48 @@ button :hover {
   }
 
   .browser-nav nav {
-    width: 95%;
+    width: 100%;
+    margin-left: 27px;
+    margin-right: 37px;
+  }
+
+  .browser-nav ul {
+    display: flex;
+  }
+
+  #planet-card{
+  margin-top: 190px;
+  justify-content: end !important;
+  margin-right: 50px;
+  margin-bottom: 167px;
+  }
+
+  #planet-image {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .planet-data {
+    margin-top: 162px;
+    margin-right: 162px !important;
+    margin-left: 216px !important;
+
+  }
+
+  .is-browser {
+    margin-right: 162px !important;
+    margin-left: 216px !important;
+    margin-bottom: 87px !important;
+  }
+
+  .planet-stats{
+    margin: 0px 165px 56px 165px;
+    gap: 30px !important;
+    
+  }
+
+  .planet-stats div {
+    padding-bottom: 27px !important;
   }
 }
 
@@ -432,6 +475,7 @@ button :hover {
 
   .browser-nav li {
     list-style: none;
+    font-size: var(--fs-200);
   }
 
   #planet-card {
