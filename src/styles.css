@@ -363,12 +363,13 @@ button :hover {
 
 @media (min-width: 61em) {
   .container-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "topbar browserNav"
-      "planetCard  planetData"
-      "planetCard  isBrowser"
-      " planetStats planetStats " !important;
+    /* grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr !important; */
+
+    /* grid-template-areas:
+      "topbar topbar topbar topbar browserNav browserNav browserNav"
+      "planetCard planetCard  planetCard   planetData planetData planetData"
+      "planetCard planetCard planetCard  isBrowser isBrowser isBrowser"
+      "planetStats planetStats planetStats planetStats planetStats planetStats" !important; */
   }
 
   .top-bar {
@@ -388,7 +389,6 @@ button :hover {
 
   .browser-nav nav {
     width: 95%;
-
   }
 }
 
