@@ -1,8 +1,9 @@
 import "../styles.css";
+import iconImage from "../assets/images/icon-source.svg"
 
 
 
-export default function Planet({planetImage, iconImage, planetData}) {
+export default function Planet({planetImage, planetData}) {
 
     console.log(planetData)
   return (
