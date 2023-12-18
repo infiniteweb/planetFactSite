@@ -38,31 +38,65 @@ import planeturanusinternal from "./assets/images/planet-uranus-internal.svg";
 
 import planetneptuneinternal from "./assets/images/planet-neptune-internal.svg";
 
-const Images = {
-  geologyearth,
-  geologyjupiter,
-  geologymars,
-  geologymercury,
-  geologyneptune,
-  geologysaturn,
-  geologyuranus,
-  geologyvenus,
-  planetearth,
-  planetearthinternal,
-  planetjupiter,
-  planetjupiterinternal,
-  planetmars,
-  planetmarsinternal,
-  planetmercury,
-  planetmercuryinternal,
-  planetneptune,
-  planetneptuneinternal,
-  planetsaturn,
-  planetsaturninternal,
-  planeturanus,
-  planeturanusinternal,
-  planetvenus,
-  planetvenusinternal,
+const images = {
+  mercury: {
+    surface: geologymercury,
+    overview: planetmercury,
+    structure: planetmercuryinternal,
+  },
+  venus: {
+    surface: geologyvenus,
+    overview: planetvenus,
+    structure: planetvenusinternal,
+  },
+  earth: {
+    surface: geologyearth,
+    overview: planetearth,
+    structure: planetearthinternal,
+  },
+  mars: {
+    surface: geologymars,
+    overview: planetmars,
+    structure: planetmarsinternal,
+  },
+  jupiter: {
+    surface: geologyjupiter,
+    overview: planetjupiter,
+    structure: planetjupiterinternal,
+  },
+  saturn: {
+    surface: geologysaturn,
+    overview: planetsaturn,
+    structure: planetsaturninternal,
+  },
+  uranus: {
+    surface: geologyuranus,
+    overview: planeturanus,
+    structure: planeturanusinternal,
+  },
+  neptune: {
+    surface: geologyneptune,
+    overview: planetneptune,
+    structure: planetneptuneinternal,
+  },
 };
 
-export default Images;
+const surfaceImages = {
+  mercury: geologymercury,
+
+  venus: geologyvenus,
+
+  earth: geologyearth,
+
+  mars: geologymars,
+
+  jupiter: geologyjupiter,
+
+  saturn: geologysaturn,
+
+  uranus: geologyuranus,
+
+  neptune: geologyneptune,
+};
+
+export { images, surfaceImages };

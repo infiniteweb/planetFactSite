@@ -1,28 +1,42 @@
 import "../styles.css";
-import iconImage from "../assets/images/icon-source.svg"
+import iconImage from "../assets/images/icon-source.svg";
+import { useState } from "react";
 
 
+export default function Planet({ planetImage, planetData, surfaceImage }) {
+  const [dataSelect, setDataSelect] = useState(planetData.overview.content);
+  const [imageSelect, setImageSelect] = useState(planetImage.overview)
+  
+  const handleDataChange = (event) => {
+    const id = event.target.getAttribute("data-id");
+    setDataSelect(planetData[id].content);
+    setImageSelect(planetImage[id])
+  };
 
-export default function Planet({planetImage, planetData}) {
-
-    console.log(planetData)
   return (
     <>
       <div className="is-mobile">
         <div className="is-mobile-textbox is-mobile-overview">
-          <h3>OVERVIEW</h3>
+          <h3 onClick={handleDataChange} data-id="overview">
+            OVERVIEW
+          </h3>
         </div>
         <div className="is-mobile-textbox">
-          <h3>STRUCTURE</h3>
+          <h3 onClick={handleDataChange} data-id="structure">
+            STRUCTURE
+          </h3>
         </div>
         <div className="is-mobile-textbox">
-          <h3>SURFACE</h3>
+          <h3 onClick={handleDataChange} data-id="geology">
+            SURFACE
+          </h3>
         </div>
       </div>
 
       <div id="planet-card">
         <span id="planet-image-wrapper">
-          <img id="planet-image" src={planetImage} />
+          <img id="planet-image" src={imageSelect} />
+          <img id="planet-surface-image" src={surfaceImage}/>
         </span>
       </div>
 
@@ -31,9 +45,7 @@ export default function Planet({planetImage, planetData}) {
           <>
             <h1 className="planet-data-name">{planetData.name}</h1>
 
-            <p className="planet-data-overview">
-              {planetData.overview.content}
-            </p>
+            <p className="planet-data-overview">{dataSelect}</p>
             <div className="source">
               <span>Source: </span>
               <a href={planetData.overview.source}>
