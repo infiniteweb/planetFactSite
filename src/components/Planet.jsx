@@ -2,15 +2,22 @@ import "../styles.css";
 import iconImage from "../assets/images/icon-source.svg";
 import { useState } from "react";
 
-
 export default function Planet({ planetImage, planetData, surfaceImage }) {
   const [dataSelect, setDataSelect] = useState(planetData.overview.content);
-  const [imageSelect, setImageSelect] = useState(planetImage.overview)
-  
+  const [imageSelect, setImageSelect] = useState(planetImage.overview);
+  const [geologyImage, setGeologyImage] = useState(false);
+
   const handleDataChange = (event) => {
     const id = event.target.getAttribute("data-id");
+    console.log(id);
     setDataSelect(planetData[id].content);
-    setImageSelect(planetImage[id])
+    setImageSelect(planetImage[id]);
+    if (id === "geology") {
+     setImageSelect(planetImage.overview)
+      setGeologyImage(true);
+    }else{
+      setGeologyImage(false)
+    }
   };
 
   return (
@@ -36,7 +43,8 @@ export default function Planet({ planetImage, planetData, surfaceImage }) {
       <div id="planet-card">
         <span id="planet-image-wrapper">
           <img id="planet-image" src={imageSelect} />
-          <img id="planet-surface-image" src={surfaceImage}/>
+          
+        {geologyImage && <img id="planet-surface-image" src={surfaceImage} />}
         </span>
       </div>
 

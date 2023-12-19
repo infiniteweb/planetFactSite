@@ -495,7 +495,7 @@ button :hover {
 
   .browser-nav ul {
     display: flex !important;
-    justify-content: end;
+    justify-content: center;
     gap: 6.5%;
     padding: 0;
     min-width: 45%;
