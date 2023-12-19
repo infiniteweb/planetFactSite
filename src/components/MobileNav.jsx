@@ -1,0 +1,61 @@
+import "../styles.css";
+import MobileNavLink from "./MobileNavLink";
+
+export default function MobileNav({ handleSetMobileNav }) {
+  return (
+    <>
+      <nav>
+        <ul>
+          <li>
+            <MobileNavLink
+              handleSetMobileNav={handleSetMobileNav}
+              planetName={"mercury"}
+            />
+          </li>
+          <li>
+            <MobileNavLink
+              handleSetMobileNav={handleSetMobileNav}
+              planetName={"venus"}
+            />
+          </li>
+          <li>
+            <MobileNavLink
+              handleSetMobileNav={handleSetMobileNav}
+              planetName={"earth"}
+            />
+          </li>
+          <li>
+            <MobileNavLink
+              handleSetMobileNav={handleSetMobileNav}
+              planetName={"mars"}
+            />
+          </li>
+          <li>
+            <MobileNavLink
+              handleSetMobileNav={handleSetMobileNav}
+              planetName={"jupiter"}
+            />
+          </li>
+          <li>
+            <MobileNavLink
+              handleSetMobileNav={handleSetMobileNav}
+              planetName={"saturn"}
+            />
+          </li>
+          <li>
+            <MobileNavLink
+              handleSetMobileNav={handleSetMobileNav}
+              planetName={"uranus"}
+            />
+          </li>
+          <li>
+            <MobileNavLink
+              handleSetMobileNav={handleSetMobileNav}
+              planetName={"neptune"}
+            />
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
+}

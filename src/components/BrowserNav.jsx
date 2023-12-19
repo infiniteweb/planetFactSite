@@ -11,7 +11,7 @@ export default function BrowserNav() {
               <NavLink to="/">MERCURY</NavLink>
             </li>
             <li>
-              <NavLink to="/venus">VENUS</NavLink>
+              <NavLink to="/venus" >VENUS</NavLink>
             </li>
             <li>
               <NavLink to="/earth">EARTH</NavLink>
