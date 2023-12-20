@@ -1,15 +1,19 @@
 import "../styles.css";
 
 export default function IsMobile({ dataSelect, planetData, handleDataChange }) {
+  // console.log(dataSelect)
+  // console.log(planetData.overview.content)
+  // console.log(planetData.name)
   return (
     <>
+
       {" "}
       <div className="is-mobile-textbox is-mobile-overview">
         <h3
           onClick={handleDataChange}
           data-id="overview"
-          className={dataSelect === planetData.overview.content ? "active" : ""}
-          id={`td-${planetData.name}`}
+          id={dataSelect === planetData.overview.content ? `td-${planetData.name}` : ""}
+        
         >
           OVERVIEW
         </h3>
@@ -18,10 +22,7 @@ export default function IsMobile({ dataSelect, planetData, handleDataChange }) {
         <h3
           onClick={handleDataChange}
           data-id="structure"
-          className={
-            dataSelect === planetData.structure.content ? "active" : ""
-          }
-          id={`td-${planetData.name}`}
+          id={dataSelect === planetData.structure.content ? `td-${planetData.name}` : ""}
         >
           STRUCTURE
         </h3>
@@ -30,8 +31,7 @@ export default function IsMobile({ dataSelect, planetData, handleDataChange }) {
         <h3
           onClick={handleDataChange}
           data-id="geology"
-          className={dataSelect === planetData.geology.content ? "active" : ""}
-          id={`td-${planetData.name}`}
+          id={dataSelect === planetData.geology.content ? `td-${planetData.name}` : ""}
         >
           SURFACE
         </h3>

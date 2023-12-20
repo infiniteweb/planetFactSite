@@ -1,8 +1,9 @@
 import "./styles.css";
 import "./quickStyles.css";
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Planet from "./pages/Planet.jsx";
+
 import BrowserNav from "./components/browserNav";
 import data from "../data.json";
 import navBarImage from "./assets/images/icon-hamburger.svg";
@@ -10,12 +11,23 @@ import MobileNav from "./components/MobileNav.jsx";
 import { images, surfaceImages } from "./images.js";
 
 function App() {
-  const [mobileNav, setMobileNav] = useState(true);
-
+  console.log(data)
+  const [mobileNav, setMobileNav] = useState(false);
   function handleSetMobileNav() {
     console.log("click");
     setMobileNav((prevMobileNav) => !prevMobileNav);
   }
+
+  const planetNames = [
+    "mercury",
+    "venus",
+    "earth",
+    "mars",
+    "jupiter",
+    "saturn",
+    "uranus",
+    "neptune",
+  ];
 
   return (
     <>
@@ -30,14 +42,19 @@ function App() {
               onClick={handleSetMobileNav}
             />
           </div>
+          <BrowserNav planetNames={planetNames} />
           <div className="mobile-nav">
-            {mobileNav && <MobileNav handleSetMobileNav={handleSetMobileNav} />}
+            {mobileNav && (
+              <MobileNav
+                handleSetMobileNav={handleSetMobileNav}
+                planetNames={planetNames}
+              />
+            )}
           </div>
           {!mobileNav && (
             <>
-              <BrowserNav />
-
               <Routes>
+                
                 <Route
                   exact
                   path="/"

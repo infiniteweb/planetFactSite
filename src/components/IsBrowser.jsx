@@ -1,6 +1,7 @@
 import "../styles.css";
 
 export default function Isbrowser({handleDataChange, dataSelect, planetData}) {
+  console.log(planetData.name)
   return (
     <>
       <button

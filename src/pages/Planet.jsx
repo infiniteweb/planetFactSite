@@ -5,7 +5,8 @@ import PlanetImage from "../components/PlanetImage";
 import PlanetData from "../components/PlanetData";
 import Isbrowser from "../components/IsBrowser";
 import PlanetStats from "../components/PlanetStats";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 
 export default function Planet({ planetImage, planetData, surfaceImage }) {
   const [dataSelect, setDataSelect] = useState(planetData.overview.content);
@@ -23,10 +24,13 @@ export default function Planet({ planetImage, planetData, surfaceImage }) {
       setGeologyImage(false);
     }
   };
+  useEffect(() => {
+    setDataSelect(planetData.overview.content);
+    setImageSelect(planetImage.overview);
+  }, [planetData, planetImage.overview]);
 
   return (
     <>
-    
       <div className="is-mobile">
         <IsMobile
           handleDataChange={handleDataChange}
