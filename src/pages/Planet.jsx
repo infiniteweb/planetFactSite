@@ -12,6 +12,7 @@ export default function Planet({ planetImage, planetData, surfaceImage }) {
   const [dataSelect, setDataSelect] = useState(planetData.overview.content);
   const [imageSelect, setImageSelect] = useState(planetImage.overview);
   const [geologyImage, setGeologyImage] = useState(false);
+  const planetName= planetData.name
   const handleDataChange = (event) => {
     const id = event.target.getAttribute("data-id");
 
@@ -28,7 +29,7 @@ export default function Planet({ planetImage, planetData, surfaceImage }) {
     setDataSelect(planetData.overview.content);
     setImageSelect(planetImage.overview);
   }, [planetData, planetImage.overview]);
-
+  console.log(planetName)
   return (
     <>
       <div className="is-mobile">
@@ -43,6 +44,8 @@ export default function Planet({ planetImage, planetData, surfaceImage }) {
           geologyImage={geologyImage}
           imageSelect={imageSelect}
           surfaceImage={surfaceImage}
+          planetName={planetName}
+          
         />
       </div>
       <div className="planet-data">

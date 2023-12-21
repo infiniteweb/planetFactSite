@@ -1,12 +1,19 @@
 import "../styles.css";
 
-export default function PlanetImage({geologyImage, imageSelect, surfaceImage}) {
+export default function PlanetImage({
+  geologyImage,
+  imageSelect,
+  surfaceImage,
+  planetName,
+}) {
   return (
     <>
-      <span id="planet-image-wrapper">
-        <img id="planet-image" src={imageSelect} />
+      <span id={`planet-image-${planetName}`}>
+        <img src={imageSelect} />
 
-        {geologyImage && <img id="planet-surface-image" src={surfaceImage} />}
+        {geologyImage && (
+          <img id={`planet-surface-image-${planetName}`} src={surfaceImage} />
+        )}
       </span>
     </>
   );

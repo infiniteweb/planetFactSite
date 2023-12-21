@@ -393,26 +393,227 @@ button :hover {
 }
 
 #planet-image-wrapper {
-  width: 46%;
+  width: 100%;
   position: relative;
 }
 
-#planet-image {
+#planet-image-Mercury {
   margin: 0 auto;
+  width: 30vw;
+  position: relative;
 }
 
-#planet-surface-image {
+#planet-image-Venus {
+  margin: 0 auto;
+  width: 41vw;
+  position: relative;
+}
+
+#planet-image-Earth {
+  margin: 0 auto;
+  width: 46vw;
+  position: relative;
+}
+#planet-image-Mars {
+  margin: 0 auto;
+  width: 34vw;
+  position: relative;
+}
+
+#planet-image-Jupiter {
+  margin: 0 auto;
+  width: 59vw;
+  position: relative;
+}
+
+#planet-image-Saturn {
+  margin: 0 auto;
+  width: 68vw;
+  position: relative;
+}
+
+#planet-image-Neptune {
+  margin: 0 auto;
+  width: 47vw;
+  position: relative;
+}
+
+#planet-image-Uranus {
+  margin: 0 auto;
+  width: 46vw;
+  position: relative;
+}
+
+#planet-surface-image-Mercury {
   position: absolute;
-  width: 44%;
+  width: 15vw;
   height: auto;
+  left: 25%;
+  bottom: -25%;
+}
+
+#planet-surface-image-Venus {
+  position: absolute;
+  width: 15vw;
+  height: auto;
+  left: 32%;
   bottom: -20%;
-  right: 27.6%;
+}
+
+#planet-surface-image-Earth {
+  position: absolute;
+  width: 17vw;
+  height: auto;
+  left: 32%;
+  bottom: -20%;
+}
+
+#planet-surface-image-Mars {
+  position: absolute;
+  width: 17vw;
+  height: auto;
+  left: 25%;
+  bottom: -25%;
+}
+
+#planet-surface-image-Jupiter {
+  position: absolute;
+  width: 20vw;
+  height: auto;
+  left: 33%;
+  bottom: -18%;
+}
+
+#planet-surface-image-Saturn {
+  position: absolute;
+  width: 20vw;
+  height: auto;
+  left: 35.5%;
+  bottom: 1%;
+}
+
+#planet-surface-image-Neptune {
+  position: absolute;
+  width: 20vw;
+  height: auto;
+  left: 29%;
+  bottom: -18%;
+}
+
+#planet-surface-image-Uranus {
+  position: absolute;
+  width: 20vw;
+  height: auto;
+  left: 28.5%;
+  bottom: -23%;
 }
 
 @media (min-width: 47em) {
   #planet-image-wrapper {
     width: 37%;
-    
+  }
+
+  #planet-image-Mercury {
+    margin: 0 auto;
+    width: 23vw;
+  }
+
+  #planet-image-Venus {
+    margin: 0 auto;
+    width: 32vw;
+  }
+
+  #planet-image-Earth {
+    margin: 0 auto;
+    width: 37vw;
+  }
+  #planet-image-Mars {
+    margin: 0 auto;
+    width: 27vw;
+  }
+
+  #planet-image-Jupiter {
+    margin: 0 auto;
+    width: 47vw;
+  }
+
+  #planet-image-Saturn {
+    margin: 0 auto;
+    width: 38vw;
+  }
+
+  #planet-image-Neptune {
+    margin: 0 auto;
+    width: 37.5vw;
+  }
+
+  #planet-image-Uranus {
+    margin: 0 auto;
+    width: 46vw;
+  }
+
+  #planet-surface-image-Mercury {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    left: 26.5%;
+    bottom: -25%;
+  }
+
+  #planet-surface-image-Venus {
+    position: absolute;
+    width: 13vw;
+    height: auto;
+    left: 30%;
+    bottom: -20%;
+  }
+
+  #planet-surface-image-Earth {
+    position: absolute;
+    width: 13vw;
+    height: auto;
+    left: 32.5%;
+    bottom: -17%;
+  }
+
+  #planet-surface-image-Mars {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    left: 30%;
+    bottom: -19%;
+  }
+
+  #planet-surface-image-Jupiter {
+    position: absolute;
+    width: 15vw;
+    height: auto;
+    left: 34%;
+    bottom: -13%;
+  }
+
+  #planet-surface-image-Saturn {
+    position: absolute;
+    width: 13vw;
+    height: auto;
+    left: 33%;
+    bottom: -5%;
+  }
+
+  #planet-surface-image-Neptune {
+    position: absolute;
+    width: 13vw;
+    height: auto;
+    left: 33%;
+    bottom: -13%;
+  }
+
+  #planet-surface-image-Uranus {
+    position: absolute;
+    width: 13vw;
+    height: auto;
+    left: 36%;
+    bottom: -13%;
   }
 }
 
@@ -421,14 +622,111 @@ button :hover {
     padding: 0;
   }
   #planet-image-wrapper {
-    width: 71%;
+    width: 100%;
     height: auto;
-    max-width: 582px;
   }
-  #planet-surface-image {
-    width: 26%;
-    bottom: -13%;
-    right: 36.9%;
+
+  #planet-image-Mercury {
+    margin: 0 auto;
+    width: 20vw;
+  }
+
+  #planet-image-Venus {
+    margin: 0 auto;
+    width: 27vw;
+  }
+
+  #planet-image-Earth {
+    margin: 0 auto;
+    width: 31vw;
+  }
+  #planet-image-Mars {
+    margin: 0 auto;
+    width: 23vw;
+  }
+
+  #planet-image-Jupiter {
+    margin: 0 auto;
+    width: 40vw;
+  }
+
+  #planet-image-Saturn {
+    margin: 0 auto;
+    width: 45vw;
+  }
+
+  #planet-image-Neptune {
+    margin: 0 auto;
+    width: 31vw;
+  }
+
+  #planet-image-Uranus {
+    margin: 0 auto;
+    width: 32vw;
+  }
+
+  #planet-surface-image-Mercury {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    left: 23%;
+    bottom: -29%;
+  }
+
+  #planet-surface-image-Venus {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    left: 30%;
+    bottom: -20%;
+  }
+
+  #planet-surface-image-Earth {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    left: 32.5%;
+    bottom: -17%;
+  }
+
+  #planet-surface-image-Mars {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    left: 26.5%;
+    bottom: -25%;
+  }
+
+  #planet-surface-image-Jupiter {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    left: 36.5%;
+    bottom: 3%;
+  }
+
+  #planet-surface-image-Saturn {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    left: 38%;
+    bottom: 7%;
+  }
+
+  #planet-surface-image-Neptune {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    left: 32.5%;
+    bottom: -17%;
+  }
+
+  #planet-surface-image-Uranus {
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    left: 33%;
+    bottom: -17%;
   }
 }
 
