@@ -12,7 +12,11 @@ export default function PlanetImage({
         <img src={imageSelect} />
 
         {geologyImage && (
-          <img id={`planet-surface-image-${planetName}`} src={surfaceImage} />
+          <img
+            id={`planet-surface-image-${planetName}`}
+            className="planet-surface-image"
+            src={surfaceImage}
+          />
         )}
       </span>
     </>

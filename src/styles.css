@@ -628,40 +628,52 @@ button :hover {
   #planet-image-Mercury {
     margin: 0 auto;
     width: 20vw;
+    max-width: 290px;
   }
 
   #planet-image-Venus {
     margin: 0 auto;
     width: 27vw;
+    max-width: 400px;
   }
 
   #planet-image-Earth {
     margin: 0 auto;
     width: 31vw;
+    max-width: 450px;
   }
   #planet-image-Mars {
     margin: 0 auto;
     width: 23vw;
+    max-width: 336px;
   }
 
   #planet-image-Jupiter {
     margin: 0 auto;
     width: 40vw;
+    max-width: 582px;
   }
 
   #planet-image-Saturn {
     margin: 0 auto;
     width: 45vw;
+    max-width: 648px;
   }
 
   #planet-image-Neptune {
     margin: 0 auto;
     width: 31vw;
+    max-width: 446px;
   }
 
   #planet-image-Uranus {
     margin: 0 auto;
     width: 32vw;
+    max-width: 458px;
+  }
+
+  .planet-surface-image {
+    max-width: 159px;
   }
 
   #planet-surface-image-Mercury {
@@ -884,7 +896,7 @@ button :hover {
 
 @media (min-width: 60em) {
   .container-grid {
-    grid-template-columns: 32% 32% 36% !important;
+    grid-template-columns: 32% 32% 36%;
     grid-template-areas:
       "topbar  browserNav browserNav"
       "planetCard planetCard  planetData"
