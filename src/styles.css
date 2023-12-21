@@ -212,7 +212,7 @@ span {
 /* set up the body */
 body {
   line-height: 1.5;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 /* make images easier to work with */
@@ -658,7 +658,7 @@ button :hover {
   #planet-image-Saturn {
     margin: 0 auto;
     width: 45vw;
-    max-width: 648px;
+    max-width: 582px;
   }
 
   #planet-image-Neptune {
