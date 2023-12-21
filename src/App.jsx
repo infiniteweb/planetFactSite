@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Planet from "./pages/Planet.jsx";
 
-import BrowserNav from "./components/browserNav";
+import BrowserNav from "./components/BrowserNav";
 import data from "../data.json";
 import navBarImage from "./assets/images/icon-hamburger.svg";
 import MobileNav from "./components/MobileNav.jsx";
