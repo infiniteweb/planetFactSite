@@ -212,7 +212,7 @@ span {
 /* set up the body */
 body {
   line-height: 1.5;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 /* make images easier to work with */
@@ -301,7 +301,7 @@ button :hover {
     "planetCard"
     "planetData"
     "planetStats";
-  max-height: 100vh;
+ 
   /* grid-template-rows: 10vh 7vh 46vh 35vh; */
 }
 
