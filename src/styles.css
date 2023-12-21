@@ -301,7 +301,7 @@ button :hover {
     "planetCard"
     "planetData"
     "planetStats";
- 
+
   /* grid-template-rows: 10vh 7vh 46vh 35vh; */
 }
 
@@ -620,6 +620,7 @@ button :hover {
 @media (min-width: 60em) {
   #planet-card {
     padding: 0;
+    max-height: 56vh;
   }
   #planet-image-wrapper {
     width: 100%;
@@ -936,7 +937,6 @@ button :hover {
     justify-content: end !important;
     margin-right: 2.2vw;
   }
-
 
   .planet-data {
     margin: 11% 35% 0px 0px !important;
