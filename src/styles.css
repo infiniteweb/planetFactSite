@@ -747,6 +747,7 @@ button :hover {
   display: flex;
   text-align: center;
   align-items: center;
+  min-height: 30vh;
 }
 
 .planet-data-name {
@@ -849,6 +850,11 @@ button :hover {
     color: white;
   }
 
+  #planet-card {
+    padding: 5vh 0 3.6vh;
+    min-height: 50vh;
+  }
+
   .planet-data {
     text-align: start;
     margin-left: 39px;
@@ -931,8 +937,6 @@ button :hover {
     margin-right: 2.2vw;
   }
 
-  #planet-card {
-  }
 
   .planet-data {
     margin: 11% 35% 0px 0px !important;
