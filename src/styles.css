@@ -301,6 +301,7 @@ button :hover {
     "planetCard"
     "planetData"
     "planetStats";
+  max-height: 100vh;
   /* grid-template-rows: 10vh 7vh 46vh 35vh; */
 }
 
