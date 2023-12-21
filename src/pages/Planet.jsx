@@ -28,6 +28,7 @@ export default function Planet({ planetImage, planetData, surfaceImage }) {
   useEffect(() => {
     setDataSelect(planetData.overview.content);
     setImageSelect(planetImage.overview);
+    setGeologyImage(false)
   }, [planetData, planetImage.overview]);
   console.log(planetName)
   return (
